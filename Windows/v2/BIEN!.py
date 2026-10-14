@@ -10,6 +10,7 @@ flag = False
 platform_x = 450
 end = False
 p,b,j = 50,0,100
+z,l = 0,0
 
 a = 0
 
@@ -30,13 +31,19 @@ while running:
 
         if event.type == pygame.MOUSEBUTTONDOWN:
             flag = True
-            x,y = event.pos
+            l,z = event.pos
 
-    rasst_kn_x = abs(x - 100)
+    rasst_kn_x = abs(l - 100)
     if rasst_kn_x <= 25:
         p = random.randint(0,255)
         b = random.randint(0,255)
         j = random.randint(0,255)
+    rasst_kn_y = abs(z - 100)
+    if rasst_kn_y <= 25:
+        p = random.randint(0,255)
+        b = random.randint(0,255)
+        j = random.randint(0,255)
+        
 
     if flag == True:
         if q == 1:

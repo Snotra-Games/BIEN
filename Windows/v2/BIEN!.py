@@ -11,6 +11,7 @@ platform_x = 450
 end = False
 p,b,j = 50,0,100
 z,l = 0,0
+color = False
 
 a = 0
 
@@ -34,15 +35,14 @@ while running:
             l,z = event.pos
 
     rasst_kn_x = abs(l - 100)
-    if rasst_kn_x <= 25:
-        p = random.randint(0,255)
-        b = random.randint(0,255)
-        j = random.randint(0,255)
     rasst_kn_y = abs(z - 100)
-    if rasst_kn_y <= 25:
+    if rasst_kn_x <= 25 and rasst_kn_y <= 25 and color == False:
         p = random.randint(0,255)
         b = random.randint(0,255)
         j = random.randint(0,255)
+        color = True
+    
+
         
 
     if flag == True:
